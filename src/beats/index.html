@@ -60,6 +60,13 @@
 <script>
     window.addEventListener('keydown', function(e) {
         console.log('Got keycode: ', e.keyCode);
+
+        //Play code
+        const audioToPlay = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        if( !audioToPlay ) return; //just stop the function, unrecognized key input
+        //Let's make some music
+
+        console.log(audioToPlay);
     });
 </script>
 
