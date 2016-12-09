@@ -64,9 +64,10 @@
         //Play code
         const audioToPlay = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         if( !audioToPlay ) return; //just stop the function, unrecognized key input
-        //Let's make some music
 
-        console.log(audioToPlay);
+        //Let's make some music
+        audioToPlay.currentTime = 0; // Rewind to start for frequent button pushes
+        audioToPlay.play();
     });
 </script>
 
